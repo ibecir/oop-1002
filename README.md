@@ -62,5 +62,5 @@ By the end of this course, students will be able to:
 
 ---
 
-If you have any questions or need assistance throughout the course, feel free to reach out to the professor or any of the teaching assistants during their office hours, or via email.
+If you have any questions or need assistance throughout the course, feel free to reach out to the professor or any of the teaching assistants during their office hours, or via email or you can book consulation hours. The link for consultation hours is available on the lms course page. 
 

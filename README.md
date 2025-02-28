@@ -1,6 +1,6 @@
-# IT 202: Object-Oriented Programming
+# IT 1002: Object-Oriented Programming
 
-Welcome to the **Object-Oriented Programming** course repository! This course is designed for university-level students enrolled in IT 202. Over the semester, we will explore the object-oriented programming paradigm, learning to create robust, modular, and reusable code.
+Welcome to the **Object-Oriented Programming** course repository! This course is designed for university-level students enrolled in IT 1002. Over the semester, we will explore the object-oriented programming paradigm, learning to create robust, modular, and reusable code.
 
 ## Course Description
 
@@ -26,20 +26,21 @@ By the end of this course, students will be able to:
 
 | Week | Topic |
 |------|-------|
-| 01   | Introduction, User input, Printing on screen & Conditional statements |
-| 02   | Git, Maven, Loops, Basics of methods, Debugging |
-| 03   | Methods, List data structure, connecting to database, and Enums |
-| 04   | Basics of objects, Encapsulation, and Inheritance |
-| 05   | Polymorphism & Abstraction |
-| 06   | Generics |
-| 07   | Optionals, `final` keyword, Lambda functions, Records, and Midterm Preparation |
-| 08   | File Manipulation, Iterators, Reflection & Custom Annotations |
-| 09   | Exceptions and Unit Testing |
-| 10   | Threads and Network Programming |
-| 11   | Design Patterns |
-| 12   | ORM Frameworks |
-| 13   | Graphical User Interface - JavaFX |
-| 14   | Recap |
+| 01   | Introduction and basics of Java |
+| 02   | Java Overview |
+| 03   | Encapsulation |
+| 04   | Inheritance |
+| 05   | Abstraction |
+| 06   | Polymorphism |
+| 07   | Generics - Template Programming |
+| 08   | Collections |
+| 09   | Lambdas |
+| 10   | Persistance (Files and RD) |
+| 11   | Meta Programming |
+| 12   | Exceptions and Unit Testing |
+| 13   | Design Patterns |
+| 14   | Network Programming and Threads |
+| 15   | Final Exam Preparation |
 
 ## Instructor and Teaching Assistants
 

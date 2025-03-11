@@ -54,6 +54,7 @@ public class Week2 {
             int tmp = n % 10;
             int i_sum = 0;
             for (int j = 2; j * j <= tmp; j++) {
+
                 if(tmp % j == 0){
                     i_sum += j;
                 }

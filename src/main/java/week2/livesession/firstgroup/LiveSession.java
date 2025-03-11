@@ -108,11 +108,9 @@ public class LiveSession {
     }
 
     /*
-
      1
      2 2
      3 3 3
-
      * */
 
     public static void printHalfPyramidShapeWithNumbersVol2(int rows) {

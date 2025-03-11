@@ -1,4 +1,4 @@
-package week2.livesession.firstgroup;
+package week2.livesession;
 
 import java.util.Scanner;
 

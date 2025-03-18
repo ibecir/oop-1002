@@ -23,11 +23,10 @@ public class DataStructures {
     }
 
     public Optional<User> getByName(String name) {
-        return users
-                .stream()
-                .filter(user -> {
-                    return user.getName().equals(name);
-                }).findFirst();
+        return users.
+                stream().
+                filter(user -> user.getName().equals(name)).
+                findFirst();
     }
 
     public List<User> findAgeGreaterThan(int age) {

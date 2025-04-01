@@ -1,4 +1,4 @@
-package week5.lectures.lecturesmaterials;
+package week5.lectures.examples;
 
 class Component {
     private String id;

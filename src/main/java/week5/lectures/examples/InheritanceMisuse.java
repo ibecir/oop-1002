@@ -1,9 +1,12 @@
-package week5.lectures.lecturesmaterials;
+package week5.lectures.examples;
+
+import java.util.List;
 
 class Customer {
     private String id;
     private String name;
     private String address;
+    private List<Order> orders;
 
     public Customer(String name, String address) {
         this.name = name;
@@ -32,6 +35,15 @@ class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public Customer setOrders(List<Order> orders) {
+        this.orders = orders;
+        return this;
     }
 }
 

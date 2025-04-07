@@ -34,6 +34,7 @@ class Person {
         }
     }
 
+    @Override
     public String toString() {
         return this.name + ", born " + this.dateOfBirth;
     }
@@ -192,7 +193,7 @@ class FootballClub {
         this.players = players;
     }
 
-    public boolean isAcceptedAsPlayer(Person player) {
+    private boolean isAcceptedAsPlayer(Person player) {
         return player.getAge() > 18;
     }
 
@@ -201,6 +202,7 @@ class FootballClub {
             this.players.add(player);
     }
 
+    @Override
     public String toString() {
         String playersString = "";
 

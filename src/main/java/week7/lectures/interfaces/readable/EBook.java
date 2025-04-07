@@ -1,9 +1,8 @@
 package week7.lectures.interfaces.readable;
 
-import java.lang.Readable;
 import java.util.ArrayList;
 
-public class EBook implements java.lang.Readable {
+public class EBook implements Readable {
     private String name;
     private ArrayList<String> pages;
     private int pageNumber;
@@ -32,7 +31,7 @@ public class EBook implements java.lang.Readable {
             System.out.println(book.read());
         }
 
-        ArrayList<java.lang.Readable> numberList = new ArrayList<java.lang.Readable>();
+        ArrayList<Readable> numberList = new ArrayList<Readable>();
         numberList.add(new SMS("teacher", "never been programming before..."));
         numberList.add(new SMS("teacher", "gonna love it i think!"));
         numberList.add(new SMS("teacher", "give me something more challenging! :)"));
@@ -45,7 +44,7 @@ public class EBook implements java.lang.Readable {
 
         numberList.add(new EBook("name", bookPages));
 
-        for (java.lang.Readable readable : numberList)
+        for (Readable readable : numberList)
             System.out.println(readable.read());
     }
 
@@ -84,19 +83,19 @@ class Printer {
         printer.print(book);
     }
 
-    public void print(java.lang.Readable readable) {
+    public void print(Readable readable) {
         System.out.println(readable.read());
     }
 }
 
-class NumberList implements java.lang.Readable {
-    private ArrayList<java.lang.Readable> readables;
+class NumberList implements Readable {
+    private ArrayList<Readable> readables;
 
     public NumberList() {
-        this.readables = new ArrayList<java.lang.Readable>();
+        this.readables = new ArrayList<Readable>();
     }
 
-    public void add(java.lang.Readable readable) {
+    public void add(Readable readable) {
         this.readables.add(readable);
     }
 

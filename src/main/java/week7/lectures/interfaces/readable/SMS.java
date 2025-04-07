@@ -1,7 +1,5 @@
 package week7.lectures.interfaces.readable;
 
-import java.lang.Readable;
-
 public class SMS implements Readable {
     private String sender;
     private String content;

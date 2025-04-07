@@ -1,4 +1,4 @@
-package week6.lectures.polymorphism.items;
+package week7.lectures.interfaces.iitems;
 
 import java.util.Random;
 

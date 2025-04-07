@@ -1,4 +1,4 @@
-package week6.lectures.polymorphism.readable;
+package week7.lectures.interfaces.ireadable;
 
 public class SMS implements Readable {
     private String sender;

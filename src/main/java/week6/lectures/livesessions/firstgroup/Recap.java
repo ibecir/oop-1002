@@ -1,6 +1,5 @@
-package week6.lectures.livesession;
+package week6.lectures.livesessions.firstgroup;
 
-import javax.swing.text.html.parser.TagElement;
 import java.util.Calendar;
 
 class Person {

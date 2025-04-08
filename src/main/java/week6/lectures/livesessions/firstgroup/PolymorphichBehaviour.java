@@ -1,4 +1,4 @@
-package week6.lectures.livesession;
+package week6.lectures.livesessions.firstgroup;
 
 class Animal {
     private String name;

@@ -31,7 +31,7 @@ public class EBook implements Readable {
             System.out.println(book.read());
         }
 
-        ArrayList<Readable> numberList = new ArrayList<Readable>();
+        ArrayList<Readable> numberList = new ArrayList<>();
         numberList.add(new SMS("teacher", "never been programming before..."));
         numberList.add(new SMS("teacher", "gonna love it i think!"));
         numberList.add(new SMS("teacher", "give me something more challenging! :)"));
@@ -69,59 +69,3 @@ public class EBook implements Readable {
         }
     }
 }
-
-class Printer {
-    public static void main(String[] args) {
-        SMS message = new SMS("teacher", "Wow, this printer is able to print them, actually!");
-        ArrayList<String> pages = new ArrayList<String>();
-        pages.add("{3, 5} are the numbers in common between {1, 3, 5} and {2, 3, 4, 5}.");
-
-        EBook book = new EBook("Introduction to University Mathematics.", pages);
-
-        Printer printer = new Printer();
-        printer.print(message);
-        printer.print(book);
-    }
-
-    public void print(Readable readable) {
-        System.out.println(readable.read());
-    }
-}
-
-class NumberList implements Readable {
-    private ArrayList<Readable> readables;
-
-    public NumberList() {
-        this.readables = new ArrayList<Readable>();
-    }
-
-    public void add(Readable readable) {
-        this.readables.add(readable);
-    }
-
-    public int howManyReadables() {
-        return this.readables.size();
-    }
-
-    public String read() {
-        String read = "";
-        for (Readable readable : this.readables) {
-            read += readable.read() + "\n";
-        }
-
-        this.readables.clear();
-        return read;
-    }
-
-    public static void main(String[] args) {
-        NumberList joelList = new NumberList();
-        joelList.add(new SMS("matti", "have you already written the tests?"));
-        joelList.add(new SMS("matti", "did you have a look at the submissions?"));
-
-        System.out.println("Joel has " + joelList.howManyReadables() + " messages to read");
-    }
-}
-
-
-
-

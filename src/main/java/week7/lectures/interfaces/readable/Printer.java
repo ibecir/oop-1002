@@ -1,4 +1,4 @@
-package week7.lectures.interfaces.ireadable;
+package week7.lectures.interfaces.readable;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package week6.lectures.madeupinterfaces;
+package week7.lectures.madeupinterfaces;
 
 import java.util.*;
 
@@ -40,6 +40,10 @@ public class MadeupInterfaces {
         Map<String, String> translations = new HashMap<String, String>();
         translations.put("gambatte", "good luck");
         translations.put("hai", "yes");
+
+        Map<Integer, String> translationsVol2 = new HashMap<Integer, String>();
+        translationsVol2.put(1, "good luck");
+        translationsVol2.put(2, "yes");
 
         Set<String> keys = translations.keySet();
         Collection<String> keySet = keys;

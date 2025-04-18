@@ -2,27 +2,19 @@ package week8.labs.Task1;
 
 public class Main {
     public static void main(String[] args) {
-        AnimalCage<Lion> lionCage = new AnimalCage<>();
-        lionCage.addAnimal(new Lion("Simba", 5));
-        lionCage.addAnimal(new Lion("Mufasa", 9));
-        lionCage.addAnimal(new Lion("Nala", 4));
+        Locker<String> locker1 = new Locker<>(101, "Confidential Agreement");
+        Locker<Double> locker2 = new Locker<>(202, 2500.75);
 
-        System.out.println("Lions before sorting:");
-        lionCage.printAnimals();
+        locker1.viewItem();
+        locker2.viewItem();
 
-        lionCage.sortAnimals();
-        System.out.println("\nLions after sorting by age:");
-        lionCage.printAnimals();
+        locker1.unlock();
+        locker2.unlock();
 
-        AnimalCage<Elephant> elephantCage = new AnimalCage<>();
-        elephantCage.addAnimal(new Elephant("Dumbo", 6));
-        elephantCage.addAnimal(new Elephant("Ella", 3));
+        locker1.viewItem();
+        locker2.viewItem();
 
-        System.out.println("\nElephants before sorting:");
-        elephantCage.printAnimals();
-
-        elephantCage.sortAnimals();
-        System.out.println("\nElephants after sorting by age:");
-        elephantCage.printAnimals();
+        locker1.lock();
+        locker2.lock();
     }
 }

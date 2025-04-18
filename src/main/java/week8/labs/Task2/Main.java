@@ -2,12 +2,10 @@ package week8.labs.Task2;
 
 public class Main {
     public static void main(String[] args) {
-        Container<String> message = new Container<>();
-        message.setItem("Hello!");
-        System.out.println("Stored: " + message.getItem());
+        Product<Double> p1 = new Product<>("Laptop", 1200.00);
+        Product<Double> p2 = new Product<>("Tablet", 850.00);
 
-        Container<Integer> number = new Container<>();
-        number.setItem(123);
-        System.out.println("Stored: " + number.getItem());
+        String result = p1.comparePrice(p2);
+        System.out.println(result);
     }
 }

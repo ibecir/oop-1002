@@ -1,4 +1,4 @@
-package week8.labs.Task1;
+package week8.labs.Task3;
 
 public abstract class Animal {
     private String name;

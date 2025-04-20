@@ -1,4 +1,4 @@
-
+package week7.labs.Task4;
 public abstract class Employee {
     protected String name;
     protected double salary;

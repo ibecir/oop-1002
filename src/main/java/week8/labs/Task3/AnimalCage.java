@@ -1,4 +1,4 @@
-package week8.labs.Task1;
+package week8.labs.Task3;
 
 import java.util.ArrayList;
 import java.util.Collections;

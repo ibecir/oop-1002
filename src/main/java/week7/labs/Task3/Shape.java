@@ -1,4 +1,4 @@
-
+package week7.labs.Task3;
 public abstract class Shape {
     protected String color;
 

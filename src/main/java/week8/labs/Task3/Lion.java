@@ -1,4 +1,4 @@
-package week8.labs.Task1;
+package week8.labs.Task3;
 
 public class Lion extends Animal implements Comparable<Lion> {
     public Lion(String name, int age) {

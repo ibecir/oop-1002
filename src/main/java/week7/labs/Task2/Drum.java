@@ -1,3 +1,4 @@
+package week7.labs.Task2;
 
 public class Drum implements Playable {
     private String brand;

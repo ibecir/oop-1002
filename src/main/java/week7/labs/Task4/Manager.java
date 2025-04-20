@@ -1,4 +1,4 @@
-
+package week7.labs.Task4;
 public class Manager extends Employee implements Reportable {
     private int teamSize;
 

@@ -19,7 +19,7 @@ public abstract class Animal {
     public abstract void makeSound();
 }
 
-class Cat extends Animal implements Securable, Payable {
+class Cat extends Animal implements Payable {
     public Cat(String name) {
         super(name);
     }
@@ -39,10 +39,6 @@ class Cat extends Animal implements Securable, Payable {
         return "";
     }
 
-    @Override
-    public boolean areYouSecure() {
-        return false;
-    }
 }
 class Elephant extends Animal {
     public Elephant(String name) {

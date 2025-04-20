@@ -1,3 +1,4 @@
+package week7.labs.Task2;
 
 public class Guitar implements Playable {
     private String brand;

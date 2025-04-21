@@ -16,7 +16,6 @@ class ClubMember implements Comparable<ClubMember> {
     public String getName() {
         return this.name;
     }
-
     public int getHeight() {
         return this.height;
     }

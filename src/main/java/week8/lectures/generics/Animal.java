@@ -16,7 +16,7 @@ class Animal {
     }
 }
 
-class Dog {
+class Dog extends Animal {
     private int name;
 
     public int getName() {
@@ -24,6 +24,19 @@ class Dog {
     }
 
     public Dog setName(int name) {
+        this.name = name;
+        return this;
+    }
+}
+
+class Cat extends Animal {
+    private int name;
+
+    public int getName() {
+        return name;
+    }
+
+    public Cat setName(int name) {
         this.name = name;
         return this;
     }

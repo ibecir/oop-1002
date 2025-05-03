@@ -24,6 +24,10 @@ class OptionalsExample {
                 .ofNullable("Top")
                 .orElseGet(() -> "Becir");
 
+        String nameValue = human
+                .map(Human::name)
+                .orElse("Default name");
+
         System.out.printf(name + " is %s\n", human);
 
         Optional<Human> humanOptional = humans

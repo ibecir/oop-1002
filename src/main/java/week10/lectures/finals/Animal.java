@@ -6,6 +6,10 @@ class Animal {
     public void eat() {
         System.out.println("Eating");
     }
+    // This method cannot be overridden
+    public void makeSound() {
+        System.out.println("Muuuuu");
+    }
 }
 
 class Lion extends Animal {

@@ -15,6 +15,7 @@ class OptionalsExample {
         );
 
         Optional<Human> human = Optional.of(new Human("Becir", 29));
+
         Human humanNullable = Optional
                 .of(new Human("Becir", 29))
                 .orElse(null);

@@ -14,6 +14,10 @@ record Person(String name, int age, int height) {
     // of the records in the brackets
     // private String address;
 
+    public Person() {
+        this("", 0, 0);
+    }
+
     public Person(String name) {
         this(name, 0, 0);
     }
@@ -27,6 +31,17 @@ record Person(String name, int age, int height) {
     // parameters that it accepts as by default it accepts all instance
     // fields and sets their values. Used only to impose extra restrictions
     // on the fields like we did it below
+
+
+    //    public Person(String name, int age, int height) {
+    //        if (age > 100)
+    //            throw new IllegalArgumentException("Age must be less than 100");
+    //        this.name = name;
+    //        this.age = age;
+    //        this.height = height;
+    //    }
+
+    // Same like the constructor on line 36
     public Person {
         if (age > 100)
             throw new IllegalArgumentException("Age must be less than 100");

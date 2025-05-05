@@ -1,7 +1,7 @@
 package week10.lectures.finals;
 
 // The final class cannot be extended
-final class Animal {
+class Animal {
     // If we make method final we cannot override it
     public void eat() {
         System.out.println("Eating");

@@ -47,6 +47,14 @@ class StudentMap {
 
         students.remove(9898);
         System.out.println(students);
+
+        for(Integer i : students.keySet()){
+            System.out.println(students.get(i));
+        }
+
+        for(Student s : students.values()){
+            System.out.println(s);
+        }
     }
 }
 

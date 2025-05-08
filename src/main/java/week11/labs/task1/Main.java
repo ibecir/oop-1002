@@ -1,28 +1,4 @@
-public class Dog {
-    private final String name;
-    private int age;
-
-    public Dog(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public void bark() {
-        System.out.println("Woof!");
-    }
-
-    public void say(String message) {
-        System.out.println("Dog says: " + message);
-    }
-
-    private void whisper() {
-        System.out.println("Secret bark...");
-    }
-
-    public static void info() {
-        System.out.println("Static info about dogs.");
-    }
-}
+package week11.labs.task1;
 
 import java.lang.reflect.*;
 
@@ -50,19 +26,16 @@ class Main {
             System.out.println(")");
         }
 
-        // Change private final field
         Field nameField = clazz.getDeclaredField("name");
         nameField.setAccessible(true);
         nameField.set(dog, "Max");
         System.out.println("\nModified name: " + nameField.get(dog));
 
-        // Change age
         Field ageField = clazz.getDeclaredField("age");
         ageField.setAccessible(true);
         ageField.set(dog, 8);
         System.out.println("Modified age: " + ageField.get(dog));
 
-        // Invoke methods
         clazz.getDeclaredMethod("bark").invoke(dog);
         clazz.getDeclaredMethod("say", String.class).invoke(dog, "Let's play!");
         Method privateMethod = clazz.getDeclaredMethod("whisper");

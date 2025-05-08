@@ -1,3 +1,5 @@
+package week11.labs.task6;
+
 import java.lang.annotation.*;
 
 @Target(ElementType.TYPE)

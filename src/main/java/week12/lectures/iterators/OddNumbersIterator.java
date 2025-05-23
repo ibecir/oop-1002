@@ -16,6 +16,7 @@ class OddNumbersIterator implements Iterator<Integer> {
         while (currentIndex < elements.length && elements[currentIndex] % 2 == 0) {
             currentIndex++;  // Skip even numbers
         }
+
         return currentIndex < elements.length;
     }
 
@@ -30,7 +31,7 @@ class OddNumbersIterator implements Iterator<Integer> {
 
 class OddNumberIteratorMain{
     public static void main(String[] args) {
-        int[] numbers = {1,2,3,4,5,6,7,8,9};
+        int[] numbers = {1,2,3,4,4,4,5,6,7,8,9};
         OddNumbersIterator iterator = new OddNumbersIterator(numbers);
         while (iterator.hasNext())
             System.out.println(iterator.next());

@@ -27,10 +27,10 @@ class SimpleCalculatorTest {
     }
 
     @Test
-    public void twoPlusFiveEqualsSeven() {
+    public void twoPlusFiveShouldEqualsSeven() {
         SimpleCalculator calculator = new SimpleCalculator();
         // From Java 10 Java can infer so var is allowed (Local variable type inference)
         // var calculator = new SimpleCalculator();
-        assertEquals(7, calculator.add(2, 5));
+        assertEquals(8, calculator.add(2, 5));
     }
 }

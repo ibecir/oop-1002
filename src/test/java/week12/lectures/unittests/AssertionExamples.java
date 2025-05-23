@@ -73,9 +73,9 @@ public class AssertionExamples {
     void givenMultipleAssertion_whenAssertingAll_thenOK() {
         Object obj = null;
         assertAll(
-                "heading",
+                "Trying to test multiple things",
                 () -> assertEquals(4, 2 * 2, "4 is 2 times 2"),
-                () -> assertEquals("s", "JAVA".toLowerCase()),
+                () -> assertEquals("java", "JAVA".toLowerCase()),
                 () -> assertNull(obj, "obj is null")
         );
     }

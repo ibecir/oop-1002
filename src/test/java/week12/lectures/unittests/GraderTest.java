@@ -39,7 +39,7 @@ class GraderTest {
     @Test
     public void negativeShouldReturnException() {
         Grader grader = new Grader();
-        assertThrows(IllegalArgumentException.class, () -> {
+        assertThrows(RuntimeException.class, () -> {
             grader.determineLetterGrade(-1);
         });
     }

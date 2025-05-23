@@ -1,0 +1,4 @@
+Haris je munja
+OOP
+FP
+DS

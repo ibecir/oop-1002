@@ -1,4 +1,4 @@
-package week11.labs.task1;
+package week11.labs.task2;
 
 import java.lang.reflect.*;
 
@@ -7,6 +7,8 @@ class Main {
         Dog dog = new Dog("Rex", 5);
 
         Class<?> clazz = dog.getClass();
+        Field[] fields = clazz.getDeclaredFields();
+        
         System.out.println("Class: " + clazz.getName());
 
         System.out.println("\nFields:");

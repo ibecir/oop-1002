@@ -1,4 +1,4 @@
-package week11.labs.task1;
+package week11.labs.task2;
 
 public class Dog {
     private final String name;

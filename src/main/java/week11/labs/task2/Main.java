@@ -2,7 +2,7 @@ package week11.labs.task2;
 
 import java.lang.reflect.*;
 
-class Main {
+class MainS {
     public static void main(String[] args) throws Exception {
         Dog dog = new Dog("Rex", 5);
 

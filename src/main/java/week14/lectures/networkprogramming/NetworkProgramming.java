@@ -11,11 +11,11 @@ import java.util.regex.Pattern;
 // https://jsonbin.io/quick-store/6578205fdc74654018821d0c
 public class NetworkProgramming {
     public static void main(String[] args) throws IOException {
-//         readPageData("https://klix.ba");
-//        readJson("https://api.jsonbin.io/v3/qs/6580223ddc7465401884b2ba");
+//         readPageData("https://rtrs.tv");
+//        readJson("https://mocki.io/v1/78a9eaec-3ae7-412b-bf35-6424f9da4f38");
         // postExample();
 //        socketServer(2345);
-        socketClient("192.168.0.100", 2345);
+        socketClient("127.0.0.1", 2345);
 //        readSimpleJson();
     }
 
@@ -33,10 +33,9 @@ public class NetworkProgramming {
         BufferedReader inputStream = new BufferedReader(new InputStreamReader(url.openStream(), StandardCharsets.UTF_8));
         String content = "";
         String line = null;
-        while ((line = inputStream.readLine()) != null)
-            content = content + line;
+        while ((line = inputStream.readLine()) != null) content = content + line;
 
-        String pattern = "<h2[^>]*>(.*?)</h2>";
+        String pattern = "<h1[^>]*>(.*?)</h1>";
 
         Pattern regex = Pattern.compile(pattern, Pattern.DOTALL);
         Matcher matcher = regex.matcher(content);
@@ -55,17 +54,34 @@ public class NetworkProgramming {
     }
 
     public static void readJson(String urlAddress) throws IOException {
+        /*
+        * SAMPLE JSON
+        {
+          "id": 1,
+          "name": "Alice",
+          "contact": {
+            "email": "alice@example.com",
+            "phone": "123-456-7890"
+          },
+          "roles": ["admin", "editor"],
+          "preferences": {
+            "notifications": {
+              "email": true,
+              "sms": false
+            }
+          }
+        }
+        * */
         URL url = new URL(urlAddress);
-        BufferedReader inputStream = new BufferedReader(
-                new InputStreamReader(url.openStream(), StandardCharsets.UTF_8)
-        );
+        BufferedReader inputStream = new BufferedReader(new InputStreamReader(url.openStream(), StandardCharsets.UTF_8));
         String content = "";
         String line = null;
-        while ((line = inputStream.readLine()) != null)
-            content = content + line;
+        while ((line = inputStream.readLine()) != null) content = content + line;
 
         JSONObject jsonObject = new JSONObject(content);
-        System.out.println(jsonObject.getJSONObject("record"));
+        System.out.println(jsonObject.getJSONObject("preferences"));
+        System.out.println(jsonObject.getJSONArray("roles"));
+        System.out.println(jsonObject.getString("name"));
     }
 
     public static void postExample() throws IOException {
@@ -96,6 +112,11 @@ public class NetworkProgramming {
                 int bytesRead = inputStream.read(buffer);
                 String message = new String(buffer, 0, bytesRead);
                 System.out.println("Received message from client: " + message);
+
+                OutputStream output = connection.getOutputStream();
+                PrintWriter writer = new PrintWriter(output, true); // auto-flush
+
+                writer.println("Hello, client!");
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -109,6 +130,11 @@ public class NetworkProgramming {
 
             // Create a BufferedReader to read from the server
             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+            OutputStream output = socket.getOutputStream();
+            PrintWriter writer = new PrintWriter(output, true); // auto-flush
+
+            writer.println("Hello, server!");
 
             // Read data from the server
             String serverData;

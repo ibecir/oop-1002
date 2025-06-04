@@ -19,7 +19,7 @@ problems.
 public class SumMultithreaded {
 
     private static final int ARRAY_SIZE = 100_000_000;
-    private static final int NUM_THREADS = 4;
+    private static final int NUM_THREADS = 30;
 
     private static int[] array = new int[ARRAY_SIZE];
 
@@ -73,7 +73,7 @@ public class SumMultithreaded {
         // Wait for all threads to finish
         for (Thread thread : threads) {
             try {
-                thread.join();
+                thread.join(); //
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

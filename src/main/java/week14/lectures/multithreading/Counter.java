@@ -1,21 +1,30 @@
 package week14.lectures.multithreading;
 
 class CounterMultithreaded implements Runnable {
-    private int threadNumber;
-
-    public CounterMultithreaded(int threadNumber) {
-        this.threadNumber = threadNumber;
+    private int threadCount;
+    public CounterMultithreaded(int threadCount) {
+        this.threadCount = threadCount;
     }
 
     @Override
     public void run() {
         for (int i = 0; i <= 5; i++) {
-            System.out.println(i + " from thread " + this.threadNumber);
+            System.out.println(i + " from thread " + this.threadCount);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+        }
+    }
+}
+
+class RunMe {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i ++) {
+            CounterMultithreaded counterMultithreaded = new CounterMultithreaded(i);
+            Thread t = new Thread(counterMultithreaded);
+            t.start();
         }
     }
 }

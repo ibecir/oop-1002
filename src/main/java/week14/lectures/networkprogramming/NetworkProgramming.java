@@ -11,8 +11,9 @@ import java.util.regex.Pattern;
 // https://jsonbin.io/quick-store/6578205fdc74654018821d0c
 public class NetworkProgramming {
     public static void main(String[] args) throws IOException {
+//        readUrl("https://klix.ba");
 //         readPageData("https://rtrs.tv");
-//        readJson("https://mocki.io/v1/78a9eaec-3ae7-412b-bf35-6424f9da4f38");
+//        readJson("https://mocki.io/v1/8b38db79-9caf-47c7-a997-162e30379e67");
         // postExample();
 //        socketServer(2345);
         socketClient("127.0.0.1", 2345);
